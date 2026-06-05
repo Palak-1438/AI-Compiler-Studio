@@ -1,0 +1,22 @@
+# Create directory structure
+mkdir -p ai_compiler/{src,tests,outputs}
+cd ai_compiler
+
+# Create all files (copy from above)
+# ... create each file ...
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set your OpenAI API key
+export OPENAI_API_KEY="your-key-here"
+
+# Run a single prompt
+python main.py --prompt "Build a CRM with login and contacts"
+
+# Run evaluation suite
+python main.py --evaluate
+
+# Run with different quality levels
+python main.py --prompt "E-commerce platform" --quality high
+python main.py --prompt "Task management app" --quality fast
